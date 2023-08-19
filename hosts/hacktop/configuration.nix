@@ -22,7 +22,7 @@ in {
     ./traits/plasma.nix
     ./traits/nextdns.nix
     ./traits/sound.nix
-    ./syncthing.nix
+    ./traits/syncthing.nix
     (import "${home-manager}/nixos")
   ];
 
