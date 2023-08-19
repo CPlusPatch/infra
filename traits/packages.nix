@@ -9,5 +9,10 @@
     unzip
     lsof
     jq
+    jhead
+    tar
   ];
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 }

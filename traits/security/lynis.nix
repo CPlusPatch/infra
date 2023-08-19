@@ -1,3 +1,1 @@
-{ config, pkgs, ... }: {
-	# TODO: Add Lynis auditing
-}
+{ config, pkgs, ... }: { environment.systemPackages = with pkgs; [ lynis ]; }
