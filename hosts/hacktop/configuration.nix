@@ -12,6 +12,7 @@ in {
     ./traits/hardening/systemd.nix
     ./traits/security/auditing.nix
     ./traits/security/lynis.nix
+    ./traits/security/apparmor.nix
     ./traits/jessew/jessew.nix
     ./traits/jessew/ssh-keys.nix
     ./traits/timezone-honolulu.nix
