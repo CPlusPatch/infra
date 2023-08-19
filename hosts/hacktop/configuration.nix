@@ -10,6 +10,7 @@ in {
     ./traits/hardening/sudo.nix
     ./traits/hardening/sysctl.nix
     ./traits/hardening/systemd.nix
+    ./traits/hardening/kernel.nix
     ./traits/security/auditing.nix
     ./traits/security/lynis.nix
     ./traits/security/apparmor.nix
