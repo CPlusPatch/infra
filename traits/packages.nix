@@ -10,7 +10,6 @@
     lsof
     jq
     jhead
-    tar
   ];
 
   # Allow unfree packages
