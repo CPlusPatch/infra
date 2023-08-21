@@ -10,6 +10,8 @@
     lsof
     jq
     jhead
+    hyfetch
+    neofetch
   ];
 
   # Allow unfree packages
