@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
-  security.apparmor.enable = mkDefault true;
-  security.apparmor.killUnconfinedConfinables = mkDefault true;
+{ config, pkgs, lib, ... }: {
+  security.apparmor.enable = lib.mkDefault true;
+  security.apparmor.killUnconfinedConfinables = lib.mkDefault true;
 }
