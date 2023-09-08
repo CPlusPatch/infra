@@ -17,18 +17,21 @@ in {
     ./traits/security/apparmor.nix
     ./traits/jessew/jessew.nix
     ./traits/jessew/ssh-keys.nix
-    ./traits/timezone-honolulu.nix
+    ./traits/kio/kio.nix
+    ./traits/timezone-toronto.nix
     ./traits/packages.nix
     ./traits/zerotier-a09acf0233609fc8.nix
     ./traits/zsh.nix
+    ./traits/nvidia.nix
     ./traits/flakes.nix
     (import "${home-manager}/nixos")
   ];
 
   home-manager.users.jessew = import ./traits/jessew/home-manager.nix;
 
-  # Use the GRUB 2 boot loader.
-  boot.loader.grub.enable = true;
+  # Use the systemd-boot EFI boot loader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "ca-nix-s01"; # Define your hostname.
   networking.networkmanager.enable =

@@ -1,7 +1,7 @@
 { config, pkgs, ... }: {
-  users.users.jessew = {
+  users.users.kio = {
     isNormalUser = true;
-    description = "Jesse Wierzbinski";
+    description = "Kio";
     extraGroups = [ "wheel" "sudo" ];
     packages = with pkgs; [ ];
   };
