@@ -2,7 +2,7 @@
   users.users.jessew = {
     isNormalUser = true;
     description = "Jesse Wierzbinski";
-    extraGroups = [ "wheel" "sudo" ];
+    extraGroups = [ "networkmanager" "wheel" "adbusers"m"sudo" ];
     packages = with pkgs; [ ];
   };
 }
