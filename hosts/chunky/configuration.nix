@@ -42,7 +42,7 @@ in {
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot";
 
-  home-manager.users.jessew = import ./home/jessew.nix;
+  home-manager.users.jessew = import ./traits/jessew/home-manager.nix;
 
   # Setup keyfile
   boot.initrd.secrets = { "/crypto_keyfile.bin" = null; };
