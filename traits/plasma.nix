@@ -7,8 +7,6 @@
   services.xserver.desktopManager.plasma5.enable = true;
   services.xserver.displayManager.defaultSession = "plasmawayland";
 
-  security.pam.services.sddm.enableKwallet = true;
-
   xdg.portal.enable = true;
 
   # Fix GTK themes on Wayland
