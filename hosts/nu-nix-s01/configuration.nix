@@ -41,6 +41,9 @@ in {
     };
   };
 
+  boot.kernel.sysctl."net.core.wmem_max" = 2500000;
+  boot.kernel.sysctl."net.core.rmem_max" = 2500000;
+
   systemd.timers.backup = {
     wantedBy = [ "timers.target" ];
     description = "Timer for the backup service";
