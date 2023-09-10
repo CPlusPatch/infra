@@ -3,6 +3,12 @@
 let
   home-manager = builtins.fetchTarball
     "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+  nixpkgs-coder = builtins.fetchTarball
+    "https://github.com/chrisportela/nixpkgs/archive/refs/heads/chrisportela/coder-v2.0.2.tar.gz";
+  overlay = final: prev: {
+    # Inherit the changes into the overlay
+    inherit (nixpkgs-coder.legacyPackages.${prev.system}) coder;
+  };
 in {
   imports = [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -28,6 +34,7 @@ in {
     ./traits/syncthing.nix
     ./traits/nvidia.nix
     ./traits/coder.nix
+    "${nixpkgs-akkoma}/pkgs/development/tools/coder/default.nix"
     (import "${home-manager}/nixos")
   ];
 
@@ -37,6 +44,8 @@ in {
     llama-cpp = (builtins.getFlake
       "github:ggerganov/llama.cpp").packages.${builtins.currentSystem}.opencl;
   };
+
+  nixpkgs.overlays = [ overlay ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
