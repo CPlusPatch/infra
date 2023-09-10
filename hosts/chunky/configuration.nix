@@ -34,7 +34,7 @@ in {
     ./traits/syncthing.nix
     ./traits/nvidia.nix
     ./traits/coder.nix
-    "${nixpkgs-coder}/pkgs/development/tools/coder/default.nix"
+    "${nixpkgs-coder}/nixos/modules/services/web-apps/coder.nix"
     (import "${home-manager}/nixos")
   ];
 
