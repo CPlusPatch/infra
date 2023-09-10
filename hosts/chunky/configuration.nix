@@ -46,8 +46,6 @@ in {
 
   nixpkgs.overlays = [ overlay ];
 
-  services.coder.package = (nixpkgs-coder.legacyPackages.${prev.system}).coder;
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
