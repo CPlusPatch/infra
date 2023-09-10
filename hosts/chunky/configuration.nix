@@ -27,6 +27,7 @@ in {
     ./traits/sound.nix
     ./traits/syncthing.nix
     ./traits/nvidia.nix
+    ./traits/coder.nix
     (import "${home-manager}/nixos")
   ];
 
