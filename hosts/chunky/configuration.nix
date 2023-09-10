@@ -33,6 +33,7 @@ in {
     ./traits/sound.nix
     ./traits/syncthing.nix
     ./traits/nvidia.nix
+    ./traits/coder.nix
     (import "${home-manager}/nixos")
   ];
 
@@ -45,11 +46,7 @@ in {
 
   nixpkgs.overlays = [ overlay ];
 
-  services.coder = {
-    enable = true;
-    listenAddress = "127.0.0.1:29643";
-    accessUrl = "https://code.cpluspatch.dev";
-  };
+  services.coder.package = (nixpkgs-coder.legacyPackages.${prev.system}).coder;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
