@@ -150,6 +150,7 @@ in {
           "radarr.cpluspatch.com" = "http://localhost:48539";
           "jackett.cpluspatch.com" = "http://localhost:37984";
           "prowlarr.cpluspatch.com" = "http://localhost:61983";
+          "code.cpluspatch.dev" = "http://localhost:29643";
         };
         default = "http_status:404";
       };
