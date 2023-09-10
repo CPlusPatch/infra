@@ -4,7 +4,7 @@ let
   home-manager = builtins.fetchTarball
     "https://github.com/nix-community/home-manager/archive/master.tar.gz";
   nixpkgs-coder = builtins.fetchTarball
-    "https://github.com/chrisportela/nixpkgs/archive/refs/heads/chrisportela/coder-v2.0.2.tar.gz";
+    "https://github.com/CPlusPatch/nixpkgs/archive/refs/heads/patch-1.tar.gz";
   overlay = final: prev: {
     # Inherit the changes into the overlay
     inherit (nixpkgs-coder.legacyPackages.${prev.system}) coder;
